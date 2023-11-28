@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      img {
+        height: 50px;
+      }
+    </style>
+    <title>Avatar Table</title>
+  </head>
+  <body>
+    <table id="avatarTable">
+      <thead>
+        <tr>
+          <th>Avatar</th>
+          <th>Name</th>
+          <th>Characteristics</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="avatar1.jpg" alt="Avatar 1" title="" /></td>
+          <td>John</td>
+          <td>Funny, Smart</td>
+        </tr>
+        <tr>
+          <td><img src="avatar2.jpg" alt="Avatar 2" title="" /></td>
+          <td>Jane</td>
+          <td>Kind, Creative</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      var images = document.querySelectorAll("#avatarTable img");
+
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.height = 50 + i * 10 + "px";
+        images[i].title = images[i].alt;
+      }
+    </script>
+  </body>
+</html>
